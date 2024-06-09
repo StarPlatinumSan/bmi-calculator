@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+
+		<title>Frontend Mentor | Body Mass Index Calculator</title>
+	</head>
+	<body>
+		<main class="container">
+			<section class="calculator">
+				<img src="assets/images/logo.svg" alt="logo" class="logoImage" />
+				<h1 class="title">Body Mass Index Calculator</h1>
+				<p class="heroDescription">
+					Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
+				</p>
+				<div class="calculation">
+					<h2 class="calculationTitle">Enter your details below</h2>
+
+					<div class="selectionButtons">
+						<div class="radioButton">
+							<input type="radio" id="metricButton" name="mesure" value="metric" checked />
+							<label for="radio">Metric</label>
+						</div>
+						<div class="radioButton">
+							<input type="radio" id="imperialButton" name="mesure" value="imperial" />
+							<label for="radio">Imperial</label>
+						</div>
+					</div>
+
+					<div class="values">
+						<div class="height">
+							<span class="heightTitle">Height</span>
+							<div class="inputWithUnit"><input type="number" class="valueHeight" /><span class="unit">cm</span></div>
+						</div>
+						<div class="weight">
+							<span class="weightTitle">Weight</span>
+							<div class="inputWithUnit"><input type="number" class="valueWeight" /> <span class="unit">kg</span></div>
+						</div>
+					</div>
+
+					<div class="result">
+						<p class="bmiTitle">Your BMI is...</p>
+						<h3 class="bmi">XX.X</h3>
+						<p class="bmiDescription">
+							Your BMI suggests you're
+							<span class="bmiSuggestion">xxx</span>. Your ideal weight is between <span class="bmiIdeal">xx - xx</span>.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="explanation">
+				<img src="assets/images/image-man-eating.webp" alt="man eating sushi" class="explanationImage" />
+				<div class="explanationText">
+					<h2 class="explanationTitle">What your BMI result means</h2>
+					<p class="explanationDescription">
+						A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar
+						content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.
+					</p>
+				</div>
+			</section>
+
+			<section class="flexBoxes">
+				<div class="eating">
+					<img src="assets/images/icon-eating.svg" alt="" />
+					<h2 class="eatingTitle">Healthy eating</h2>
+					<p class="eatingDescription">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+				</div>
+				<div class="exercise">
+					<img src="assets/images/icon-exercise.svg" alt="" />
+					<h2 class="exerciseTitle">Regular exercise</h2>
+					<p class="exerciseDescription">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+				</div>
+				<div class="sleep">
+					<img src="assets/images/icon-sleep.svg" alt="" />
+					<h2 class="sleepTitle">Adequate sleep</h2>
+					<p class="sleepDescription">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+				</div>
+			</section>
+
+			<section class="gridBoxes">
+				<div class="gridText">
+					<h2 class="gridTitle">Limitations of BMI</h2>
+					<p class="gridDescription">
+						Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.
+					</p>
+				</div>
+
+				<div class="gender subGrid">
+					<div class="gridImageAndTitle">
+						<img src="assets/images/icon-gender.svg" alt="gender" />
+						<h3 class="gridSubTitle">Gender</h3>
+					</div>
+
+					<p class="gridSubDescription">The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</p>
+				</div>
+				<div class="age subGrid">
+					<div class="gridImageAndTitle">
+						<img src="assets/images/icon-age.svg" alt="age" />
+						<h3 class="gridSubTitle">Age</h3>
+					</div>
+
+					<p class="gridSubDescription">In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
+				</div>
+				<div class="muscle subGrid">
+					<div class="gridImageAndTitle">
+						<img src="assets/images/icon-muscle.svg" alt="muscle" />
+						<h3 class="gridSubTitle">Muscle</h3>
+					</div>
+
+					<p class="gridSubDescription">BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
+				</div>
+				<div class="pregnancy subGrid">
+					<div class="gridImageAndTitle">
+						<img src="assets/images/icon-pregnancy.svg" alt="pregnancy" />
+						<h3 class="gridSubTitle">Pregnancy</h3>
+					</div>
+
+					<p class="gridSubDescription">Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
+				</div>
+				<div class="race subGrid">
+					<div class="gridImageAndTitle">
+						<img src="assets/images/icon-race.svg" alt="race" />
+						<h3 class="gridSubTitle">Race</h3>
+					</div>
+					<p class="gridSubDescription">Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</p>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

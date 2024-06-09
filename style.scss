@@ -1,0 +1,318 @@
+$blue: #345FF6;
+$gunmetal: #253347;
+$darkElectricBlue: #5E6E85;
+$white: #FFFFFF;
+$gradientBlue: linear-gradient(135deg, $white, #cddff7);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: $gunmetal;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    & > * {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $gradientBlue;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+    gap: 2rem;
+
+    .logoImage {
+        padding-top: 2rem;
+    }
+
+    .title {
+        font-size: 4em;
+    }
+
+    .heroDescription {
+        font-size: 1.35em;
+        color: $darkElectricBlue;
+    }
+}
+
+.calculation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: $white;
+    border-radius: 15px;
+    text-align: left;
+    padding: 2rem;
+    box-shadow: 2px 2px 15px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: -15rem;
+
+    .calculationTitle {
+        font-size: 1.75rem;
+    }
+
+    .selectionButtons {
+        display: flex;
+        gap: 5rem;
+        font-weight: 700;
+
+        input[type=radio] {
+            appearance: none;
+            background-color: $white;
+            margin: 0;
+            width: 32px;
+            height: 32px;
+            border: 1px solid $darkElectricBlue;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            
+
+            &:hover {
+                border-color: $blue;
+            }
+
+            &:checked {
+                background-color: #9db1ff49;
+                border: none;
+            }
+
+            &::before {
+                content: '';
+                width: 16px;
+                height: 16px;
+                background-color: $blue;
+                border-radius: 50%;
+                border: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0.2s;
+            }
+
+            &:checked::before {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+        }
+
+        label {
+            font-size: 1.25rem;
+        }
+
+        .radioButton {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    .values {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & > * {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        input {
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid $darkElectricBlue;
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+        
+        }
+
+        .inputWithUnit {
+            position: relative;
+
+            input {
+                width: 100%;
+                font-size: 1.5rem;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid $blue;
+                }
+            }
+
+            .unit {
+                position: absolute;
+                top: 50%;
+                right: 1em;
+                transform: translateY(-50%);
+                color: $blue;
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .result {
+        background-color: $blue;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        * {
+            color: $white;
+        }
+
+        .bmiTitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            padding-top: 2rem;
+        }
+
+        .bmi {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .bmiDescription {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            padding-bottom: 2rem;
+        }
+
+        .bmiIdeal {
+            font-weight: bold;
+        }
+        
+    }
+}
+
+.explanation {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 15rem;
+
+    .explanationImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .explanationText {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .explanationTitle {
+        font-size: 2.5rem;
+    }
+
+    .explanationDescription {
+        font-size: 1.15em;
+        line-height: 1.5;
+        color: $darkElectricBlue;
+    }
+}
+
+.flexBoxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    background: linear-gradient(to bottom, $white, #cddff741);
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    img {
+        width: 4rem;
+    }
+
+    .healthy {
+        margin-bottom: 3rem;
+    }
+
+    .sleep {
+        margin-bottom: 3rem;
+    }
+}
+
+.gridBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: linear-gradient(to bottom, $white, #cddff741);
+    padding-bottom: 5rem;
+    font-size: 1.2rem;
+    color: $darkElectricBlue;
+
+    .gridText {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+
+        .gridTitle {
+            font-size: 2rem;
+        }
+    }
+
+    .subGrid {
+        background-color: $white;
+        border-radius: 15px;
+        box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        line-height: 1.5;
+        
+
+        .gridImageAndTitle {
+            display: flex;
+            gap: 0.66rem;
+            
+
+            .gridSubTitle {
+                align-self: center;
+            }
+        }
+
+        img {
+            width: 3rem;
+        }
+
+        .gridSubDescription {
+            font-size: 1.2rem;
+            color: $darkElectricBlue;
+        }
+    }
+}
