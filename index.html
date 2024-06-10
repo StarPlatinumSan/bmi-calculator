@@ -24,31 +24,31 @@
 				<div class="calculation">
 					<h2 class="calculationTitle">Enter your details below</h2>
 
-					<div class="selectionButtons">
-						<div class="radioButton">
+					<div class="enterValues">
+						<div class="radioButton selectionButtons">
 							<input type="radio" id="metricButton" name="mesure" value="metric" checked />
 							<label for="radio">Metric</label>
 						</div>
-						<div class="radioButton">
+						<div class="radioButton selectionButtons">
 							<input type="radio" id="imperialButton" name="mesure" value="imperial" />
 							<label for="radio">Imperial</label>
 						</div>
-					</div>
 
-					<div class="values">
-						<div class="height">
+						<div class="height values">
 							<span class="heightTitle">Height</span>
 							<div class="inputWithUnit"><input type="number" class="valueHeight" /><span class="unit">cm</span></div>
 						</div>
-						<div class="weight">
+						<div class="weight values">
 							<span class="weightTitle">Weight</span>
 							<div class="inputWithUnit"><input type="number" class="valueWeight" /> <span class="unit">kg</span></div>
 						</div>
 					</div>
 
 					<div class="result">
-						<p class="bmiTitle">Your BMI is...</p>
-						<h3 class="bmi">XX.X</h3>
+						<div class="bmiTldr">
+							<p class="bmiTitle">Your BMI is...</p>
+							<h3 class="bmi">XX.X</h3>
+						</div>
 						<p class="bmiDescription">
 							Your BMI suggests you're
 							<span class="bmiSuggestion">xxx</span>. Your ideal weight is between <span class="bmiIdeal">xx - xx</span>.
@@ -69,20 +69,26 @@
 			</section>
 
 			<section class="flexBoxes">
-				<div class="eating">
+				<div class="eating flexbox">
 					<img src="assets/images/icon-eating.svg" alt="" />
-					<h2 class="eatingTitle">Healthy eating</h2>
-					<p class="eatingDescription">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+					<div class="flexTldr">
+						<h2 class="eatingTitle">Healthy eating</h2>
+						<p class="eatingDescription">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+					</div>
 				</div>
-				<div class="exercise">
+				<div class="exercise flexbox">
 					<img src="assets/images/icon-exercise.svg" alt="" />
-					<h2 class="exerciseTitle">Regular exercise</h2>
-					<p class="exerciseDescription">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+					<div class="flexTldr">
+						<h2 class="exerciseTitle">Regular exercise</h2>
+						<p class="exerciseDescription">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+					</div>
 				</div>
-				<div class="sleep">
+				<div class="sleep flexbox">
 					<img src="assets/images/icon-sleep.svg" alt="" />
-					<h2 class="sleepTitle">Adequate sleep</h2>
-					<p class="sleepDescription">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+					<div class="flexTldr">
+						<h2 class="sleepTitle">Adequate sleep</h2>
+						<p class="sleepDescription">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+					</div>
 				</div>
 			</section>
 
