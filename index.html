@@ -11,16 +11,26 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="script.js" defer></script>
+
 		<title>Frontend Mentor | Body Mass Index Calculator</title>
 	</head>
 	<body>
 		<main class="container">
 			<section class="calculator">
-				<img src="assets/images/logo.svg" alt="logo" class="logoImage" />
-				<h1 class="title">Body Mass Index Calculator</h1>
-				<p class="heroDescription">
-					Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
-				</p>
+				<div class="heroTextDesktop">
+					<img src="assets/images/logo.svg" alt="logo" class="logoImageDesktop" />
+
+					<div class="heroText">
+						<img src="assets/images/logo.svg" alt="logo" class="logoImagePhone" />
+						<h1 class="title">Body Mass Index Calculator</h1>
+						<p class="heroDescription">
+							Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
+						</p>
+					</div>
+				</div>
+
 				<div class="calculation">
 					<h2 class="calculationTitle">Enter your details below</h2>
 
@@ -34,30 +44,45 @@
 							<label for="radio">Imperial</label>
 						</div>
 
-						<div class="height values">
-							<span class="heightTitle">Height</span>
-							<div class="inputWithUnit"><input type="number" class="valueHeight" /><span class="unit">cm</span></div>
-						</div>
-						<div class="weight values">
-							<span class="weightTitle">Weight</span>
-							<div class="inputWithUnit"><input type="number" class="valueWeight" /> <span class="unit">kg</span></div>
+						<div class="allInputs">
+							<div class="height values">
+								<span class="heightTitle">Height</span>
+								<div class="inputWithUnit metricInput"><input type="number" class="valueHeight" id="cm" placeholder="0" /><span class="unit">cm</span></div>
+								<div class="imperialInput" style="display: none">
+									<div class="inputWithUnit"><input type="number" class="valueHeight" id="ft" placeholder="0" /><span class="unit">ft</span></div>
+									<div class="inputWithUnit"><input type="number" class="valueHeight" id="in" placeholder="0" /><span class="unit">in</span></div>
+								</div>
+							</div>
+							<div class="weight values">
+								<span class="weightTitle">Weight</span>
+								<div class="inputWithUnit metricInput"><input type="number" class="valueWeight" id="kg" placeholder="0" /> <span class="unit">kg</span></div>
+								<div class="imperialInput" style="display: none">
+									<div class="inputWithUnit"><input type="number" class="valueHeightSt" id="st" placeholder="0" /><span class="unit">st</span></div>
+									<div class="inputWithUnit"><input type="number" class="valueHeightLbs" id="lbs" placeholder="0" /><span class="unit">lbs</span></div>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<div class="result">
+						<div class="welcome">
+							<h3>Welcome!</h3>
+							<p>Enter your height and weight and you'll see your BMI result here</p>
+						</div>
+
 						<div class="bmiTldr">
 							<p class="bmiTitle">Your BMI is...</p>
-							<h3 class="bmi">XX.X</h3>
+							<h3 class="bmi" id="showBMI">--.-</h3>
 						</div>
 						<p class="bmiDescription">
 							Your BMI suggests you're
-							<span class="bmiSuggestion">xxx</span>. Your ideal weight is between <span class="bmiIdeal">xx - xx</span>.
+							<span class="bmiSuggestion">---</span>. Your ideal weight is between <span class="bmiIdeal">-- - --</span>.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section class="explanation">
+			<section class="explanation bodySections">
 				<img src="assets/images/image-man-eating.webp" alt="man eating sushi" class="explanationImage" />
 				<div class="explanationText">
 					<h2 class="explanationTitle">What your BMI result means</h2>
@@ -68,31 +93,31 @@
 				</div>
 			</section>
 
-			<section class="flexBoxes">
+			<section class="flexBoxes bodySections">
 				<div class="eating flexbox">
 					<img src="assets/images/icon-eating.svg" alt="" />
 					<div class="flexTldr">
 						<h2 class="eatingTitle">Healthy eating</h2>
-						<p class="eatingDescription">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
+						<p class="smallDescription">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
 					</div>
 				</div>
 				<div class="exercise flexbox">
 					<img src="assets/images/icon-exercise.svg" alt="" />
 					<div class="flexTldr">
 						<h2 class="exerciseTitle">Regular exercise</h2>
-						<p class="exerciseDescription">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
+						<p class="smallDescription">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
 					</div>
 				</div>
 				<div class="sleep flexbox">
 					<img src="assets/images/icon-sleep.svg" alt="" />
 					<div class="flexTldr">
 						<h2 class="sleepTitle">Adequate sleep</h2>
-						<p class="sleepDescription">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
+						<p class="smallDescription">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
 					</div>
 				</div>
 			</section>
 
-			<section class="gridBoxes">
+			<section class="gridBoxes bodySections">
 				<div class="gridText">
 					<h2 class="gridTitle">Limitations of BMI</h2>
 					<p class="gridDescription">

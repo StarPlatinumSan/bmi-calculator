@@ -15,7 +15,12 @@
         
         .enterValues {
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 0.5fr 1fr;
+            grid-template-rows: 0.25fr 1fr;
+
+            .allInputs {
+                grid-column: 1 / -1;
+                grid-row: 2 / 3;
+            }
 
             .height {
                 grid-row: 2 / 3;
@@ -46,6 +51,10 @@
                 padding: 0;
             }
 
+            .bmi {
+                font-size: 3rem;
+            }
+
             .bmiDescription {
                 margin: 0;
                 padding: 0;
@@ -67,6 +76,7 @@
     .explanationText {
         width: 60%;
         margin-top: 2rem;
+        justify-content: center;
 
         .explanationTitle {
             font-size: 2rem;
@@ -109,5 +119,195 @@
             justify-self: center;
             max-width: calc(50% - 0.5rem);
         }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .logoImageDesktop {
+        display: block;
+        align-self: flex-start;
+        margin-bottom: 5rem;
+    }
+
+    .logoImagePhone {
+        display: none;
+    }
+
+    .bodySections {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .calculator {
+        max-width: 70%;
+        padding: 5rem;
+        padding-top: 0;
+        min-height: 45rem;
+        align-self: flex-start;
+        text-align: left;
+        flex-direction: row;
+
+        .heroText {
+            align-self: flex-start;
+            padding: 0;
+        }
+
+        .heroTextDesktop {
+            justify-content: space-around;
+        }
+
+        .calculation {
+            min-width: 35rem;
+            margin-right: -350px;
+            margin-bottom: -75px;
+        }
+    }
+
+    .explanation {
+        margin-top: 0;
+        justify-content: flex-start;
+        gap: 5rem;
+
+        .explanationImage {
+            width: 32rem;
+            height: auto;
+        }
+
+        .explanationText {
+            width: 50%;
+        }
+    }
+
+    .flexBoxes {
+        flex-direction: row;
+        
+        & > * {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .flexbox {
+            flex-direction: column;
+            gap: 3rem;
+            .flexTldr {
+                font-size: 1.1rem;
+                gap: 2rem;
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .gridBoxes {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
+
+        .gridText {
+            grid-area: texte;
+            text-align: left;
+            align-items: flex-start;
+            margin-top: -75px;
+
+            .gridTitle {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            .gridDescription {
+                color: $darkElectricBlue;
+                font-size: 1rem;
+                line-height: 1.5;
+                max-width: 32rem;
+            }
+        }
+
+        .subGrid {
+            
+            max-height: 13rem;
+            padding: 1.25rem;
+
+            .gridSubDescription {
+                font-size: 1rem;
+            }
+        }
+
+        .gender {
+            grid-area: gender;
+            align-self: center;
+        }
+        .age {
+            grid-area: age;
+        }
+        .muscle {
+            grid-area: muscle;
+        }
+        .pregnancy {
+            grid-area: pregnancy;
+        }
+        .race {
+            grid-area: race;
+            max-width: none;
+        }
+
+        grid-template-areas:    
+            'texte texte texte gender gender .'
+            '. . age age muscle muscle'
+            '. pregnancy pregnancy race race .';
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        gap: 6rem;
+    }
+
+    .calculator {
+        padding-left: 12rem;
+
+        .heroDescription {
+            font-size: 1.25rem;
+        }
+    }
+
+    .calculator .calculation {
+        min-width: 45rem;
+        gap: 2rem;
+    }
+
+    .bodySections {
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+
+    .explanation .explanationImage {
+        width: 42rem;
+        height: auto;
+    }
+
+    .explanation .explanationText .explanationDescription {
+        font-size: 1.1rem;
+    }
+
+    .explanation .explanationTitle {
+        font-size: 3rem;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 2000px) {
+    .container > * {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+
+    .calculator .calculation {
+        min-width: 50rem;
+        margin-right: calc(-350px - 16rem);
     }
 }
