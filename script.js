@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 	function verifyInput(object) {
 		let value = $(object).val();
-		if (/^\d+$/.test(value)) {
+		if (/^\d*\.?\d*$/.test(value)) {
 			errorInput(object, false);
 
 			if ($("#kg").val() !== "" && $("#cm").val() !== "") {
@@ -115,7 +115,7 @@ $(document).ready(function () {
 	function verifyInputImperial(object) {
 		let value = $(object).val();
 
-		if (/^\d+$/.test(value)) {
+		if (/^\d*\.?\d*$/.test(value)) {
 			errorInput(object, false);
 
 			if ($("#ft").val() !== "" && $("#in").val() !== "" && ($("#st").val() !== "" || $("#lbs").val() !== "")) {
